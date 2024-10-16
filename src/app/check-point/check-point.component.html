@@ -1,0 +1,18 @@
+<form (ngSubmit)="checkPoint()">
+  <label for="polygonId">Polygon ID:</label>
+  <input type="number" [(ngModel)]="polygonId" name="polygonId" id="polygonId">
+
+  <label for="x">X Coordinate:</label>
+  <input type="number" [(ngModel)]="point.x" name="x" id="x">
+
+  <label for="y">Y Coordinate:</label>
+  <input type="number" [(ngModel)]="point.y" name="y" id="y">
+
+  <button type="submit">Check Point</button>
+
+  <button (click)="incrementCounter()">Counter: {{ counter }}</button>
+</form>
+
+<div *ngIf="result !== null">
+  <p>Point is {{ result.isInside ? 'inside' : 'outside' }} the polygon.</p>
+</div>

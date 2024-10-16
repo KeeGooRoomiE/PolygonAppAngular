@@ -1,0 +1,16 @@
+.check-point-container {
+  margin: 20px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input {
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+button {
+  margin-top: 10px;
+}

@@ -1,0 +1,12 @@
+<form (ngSubmit)="createPolygon()">
+  <div *ngFor="let point of polygonPoints; let i = index">
+    <label for="x">Point {{ i + 1 }} X:</label>
+    <input type="number" [(ngModel)]="point.x" name="x{{ i }}">
+
+    <label for="y">Point {{ i + 1 }} Y:</label>
+    <input type="number" [(ngModel)]="point.y" name="y{{ i }}">
+  </div>
+
+  <button type="button" (click)="addPoint()">Add Point</button>
+  <button type="submit">Create Polygon</button>
+</form>
